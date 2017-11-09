@@ -57,5 +57,5 @@ class Test(unittest.TestCase):
         print (self.number)
         self.assertEqual(self.number,30,msg='Your input is not 30')
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
