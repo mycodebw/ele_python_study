@@ -1,4 +1,5 @@
 from widget import Widget
+import unittest
 class TestWidget:
     def testSize(self):
         expectedSize = (40, 40);
