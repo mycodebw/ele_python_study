@@ -1,6 +1,6 @@
 import sys
 
-class Center(object):
+class Center(object):        "定义类,类初始化"
     def __init__(self, cid):
         self.cid = cid
         self.cluster_list = []
@@ -28,7 +28,7 @@ class Redis(object):
 
 
 def data():
-    wg = Center('1')
+    wg = Center('1')          "类赋值"
     xg = Center('2')
     aa1 = Cluster('test1')
     aa2 = Cluster('test2')
@@ -39,7 +39,7 @@ def data():
     a1 = Redis('1000', '127.0.0.1')
     a2 = Redis('1001', '127.0.0.2')
 
-    aa1.redis_list.append(a1)
+    aa1.redis_list.append(a1)         "列表添加元素"
     aa1.corvus_list.append(c1)
 
     wg.cluster_list.append(aa1)
