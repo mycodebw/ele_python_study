@@ -7,7 +7,7 @@ class WidgetTestCase(unittest.TestCase):
         self.widget.dispose()
         self.widget = None
     def testSize(self):
-        self.assertEqual(self.widget.getSize(), (40, 40))
+        self.assertEqual(self.widget.getSize(), (40, 40))  "断言函数返回的结果"
     def testResize(self):
         self.widget.resize(100, 100)        
         self.assertEqual(self.widget.getSize(), (100, 100))        
