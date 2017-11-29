@@ -21,9 +21,19 @@ def create_mk_files(numbers):
                 op = (path + dirs + '/' + filename)
                 opfile = open(op, "w")
                 opfile.write('test_write')
+                opfile.close()
     finally:
         print ("关闭文件")
-        opfile.close()
+
+
+def read_files():
+    for dirs in os.listdir(path):
+        if dirs.startswith('test'):
+            rdfiles = (path + dirs + '/' + filename)
+            open_rdfiles = open(rdfiles,'r')
+            for line in open_rdfiles.readlines():
+                line = line.strip() 
+                print (line)
 
 def files_num(numbers):
     for num in range (numbers):
@@ -31,7 +41,7 @@ def files_num(numbers):
 
 def create_files(crefile):
     for num in crefile:
-        print (num)
+#        print (num)
         ofile = open(num, "w")
         ofile.close()
 
@@ -40,6 +50,7 @@ def create_files(crefile):
 
 if __name__ == '__main__':
     files_num(5)
+    create_mk_files(5)
     #start_time = time.time()
     #pool = threadpool.ThreadPool(2) 
     #requests = threadpool.makeRequests(create_files, crfile)
@@ -47,3 +58,4 @@ if __name__ == '__main__':
     #pool.wait() 
     #print ('%d second'% (time.time()-start_time))
     create_files(crfile)
+    read_files()
