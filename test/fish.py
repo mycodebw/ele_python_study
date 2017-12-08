@@ -30,6 +30,10 @@ class Shark(Fish):
         else:
             print ("吃不下")
 
+    def move(self):         #多态,简单说就是调用的时候是子类重写的move函数而不是父类的move,如果super注销掉需要在子类重新定义x,y
+        self.x += 1
+        print ("我的位置:", self.x)
+
 fish = Fish()
 
 fish.move()
