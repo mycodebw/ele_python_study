@@ -1,5 +1,5 @@
 class MyException(Exception):
-    """自定义异常类"""
+    """自定义异常类,继承Base Exception下的Exception"""
     def __init__(self,message):
         Exception.__init__(self)
         self.message=message   
