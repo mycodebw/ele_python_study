@@ -27,13 +27,18 @@ def create_mk_files(numbers):
 
 
 def read_files():
-    for dirs in os.listdir(path):
-        if dirs.startswith('test'):
-            rdfiles = (path + dirs + '/' + filename)
-            open_rdfiles = open(rdfiles,'r')
-            for line in open_rdfiles.readlines():
-                line = line.strip() 
-                print (line)
+    try:
+        for dirs in os.listdir(path):
+            if dirs.startswith('test'):
+                rdfiles = (path + dirs + '/' + filename)
+                open_rdfiles = open(rdfiles,'r')
+                for line in open_rdfiles.readlines():
+                    line = line.strip() 
+                    print (line)
+    except OSError:
+        print ("不存在读取失败")
+    finally:
+        print ("Close")
 
 def files_num(numbers):
     for num in range (numbers):
