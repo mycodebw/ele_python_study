@@ -10,7 +10,7 @@ crfile = []
 
 def create_mk_files(numbers):
     try:
-        """循环创建文件"""
+        """循环创建目录"""
         for num in range(numbers):
             os.mkdir(path + dirname +str(num))
     except OSError:
